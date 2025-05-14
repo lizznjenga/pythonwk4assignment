@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Demo 2</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      transition: background-color 0.5s;
+    }
+
+    .dark-mode {
+      background-color: #333;
+      color: white;
+    }
+
+    #counter {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    #itemList li {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="counter">Count: 0</div>
+  <button onclick="incrementCounter()">Increment Counter</button>
+  <button onclick="toggleBackground()">Toggle Background</button>
+  <button onclick="addOrRemoveItem()">Add/Remove List Item</button>
+
+  <ul id="itemList"></ul>
+
+  <script>
+    let count = 0;
+    let itemAdded = false;
+
+    function incrementCounter() {
+      count++;
+      document.getElementById('counter').textContent = `Count: ${count}`;
+    }
+
+    function toggleBackground() {
+      document.body.classList.toggle('dark-mode');
+    }
+
+    function addOrRemoveItem() {
+      const list = document.getElementById('itemList');
+      const existingItem = document.getElementById('listItem');
+
+      if (existingItem) {
+        list.removeChild(existingItem);
+      } else {
+        const li = document.createElement('li');
+        li.id = 'listItem';
+        li.textContent = 'This is a dynamic list item.';
+        list.appendChild(li);
+      }
+    }
+  </script>
+
+</body>
+</html>

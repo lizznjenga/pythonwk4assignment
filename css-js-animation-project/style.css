@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s, color 0.5s;
+  }
+
+  body.light {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  body.dark {
+    background-color: #121212;
+    color: #ffffff;
+  }
+
+  .animated-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    transition: transform 0.3s ease;
+  }
+
+  .animated-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Animation class */
+  @keyframes bounce {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+
+  .bounce {
+    animation: bounce 0.5s;
+  }
+  

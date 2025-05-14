@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Webpage</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    #text {
+      font-size: 22px;
+      color: navy;
+    }
+    .styled {
+      color: crimson;
+      font-weight: bold;
+      background-color: #f0f0f0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Simple Interactive Webpage</h2>
+  <p id="text">This is the original text.</p>
+
+  <button onclick="changeText()">Change Text</button>
+  <button onclick="toggleStyle()">Toggle Style</button>
+  <button onclick="addOrRemoveBox()">Add/Remove Box</button>
+
+  <div id="boxContainer"></div>
+
+  <script>
+    function changeText() {
+      const text = document.getElementById("text");
+      text.textContent = "The text has been changed dynamically!";
+    }
+
+    function toggleStyle() {
+      const text = document.getElementById("text");
+      text.classList.toggle("styled");
+    }
+
+    function addOrRemoveBox() {
+      const container = document.getElementById("boxContainer");
+      const box = document.getElementById("dynamicBox");
+
+      if (box) {
+        container.removeChild(box);
+      } else {
+        const newBox = document.createElement("div");
+        newBox.id = "dynamicBox";
+        newBox.textContent = "I'm a dynamically added box!";
+        newBox.style.border = "1px solid #888";
+        newBox.style.padding = "10px";
+        newBox.style.marginTop = "10px";
+        container.appendChild(newBox);
+      }
+    }
+  </script>
+
+</body>
+</html>

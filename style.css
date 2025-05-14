@@ -1,0 +1,50 @@
+/* Use of class, ID, and element selectors */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f0f8ff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  /* ID selector */
+  #main-header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-bottom: 4px solid #388E3C;
+  }
+  
+  /* Class selector */
+  .subtitle {
+    font-size: 1.2em;
+    font-style: italic;
+    margin-top: 10px;
+  }
+  
+  /* Styling an image with class */
+  .featured-image {
+    width: 300px;
+    padding: 10px;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    display: block;
+    margin: 20px auto;
+  }
+  
+  /* Element selector */
+  footer {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+  }
+  
+  .footer-text {
+    font-size: 0.9em;
+    letter-spacing: 1px;
+  }
+  
